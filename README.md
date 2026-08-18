@@ -2,6 +2,8 @@
 The source code of the windows application for Vulpine.pw
 Since many people may be scared to install it directly, you can compile it with the source code that's in here
 
+# <center><a href="https://vulpine.at">--> Discover Vulpine <--</a></center>
+
 # How it's made
 At the moment, the Windows app is just an Electron shell of the existing website; Embedded using Chromium.
 
