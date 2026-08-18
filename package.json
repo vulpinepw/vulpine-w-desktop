@@ -1,0 +1,51 @@
+{
+  "name": "vulpine",
+  "version": "1.0.0",
+  "description": "Vulpine desktop app",
+  "main": "main.js",
+  "author": "Tor and Vulpine Team",
+  "copyright": "© 2026 Tor and Vulpine Team",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "app.vulpine.desktop",
+    "productName": "Vulpine",
+    "copyright": "© 2026 Tor and Vulpine Team",
+    "asar": true,
+    "files": [
+      "main.js",
+      "icon.png",
+      "icon.ico",
+      "package.json"
+    ],
+    "directories": {
+      "output": "installer-dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Vulpine",
+      "artifactName": "Vulpine-Setup.exe",
+      "runAfterFinish": true
+    }
+  }
+}
